@@ -1,10 +1,16 @@
-# WVIP — Project Instructions for Claude Code
+# BrandPulse — Project Instructions for Claude Code
 
 This file is read automatically at the start of every Claude Code session in this repo. It is the behavioral contract for this project — treat it as ground truth alongside `docs/EngineeringDesign.md`.
 
 ## What this project is
 
-Wema Bank Customer Voice Intelligence Platform (WVIP) — a multi-source sentiment/complaint monitoring pipeline for Wema Bank and ALAT. Full context: `docs/PRD.md` (what and why) and `docs/EngineeringDesign.md` (how). Read both before starting any milestone if you don't already have them in context.
+BrandPulse — an AI-powered customer voice intelligence platform: a multi-source sentiment/complaint monitoring pipeline, built first for Wema Bank and ALAT. Full context: `docs/PRD.md` (what and why) and `docs/EngineeringDesign.md` (how). Read both before starting any milestone if you don't already have them in context.
+
+Python package name: `brandpulse`, under `src/brandpulse/`.
+
+## Documentation precedence
+
+If documentation conflicts, resolve in this order: (1) this file, (2) the current milestone file in `claude/milestones/`, (3) `docs/EngineeringDesign.md`, (4) `docs/PRD.md`. If a conflict remains after that (e.g. it's a substantive architecture question, not a formatting detail), stop and ask rather than picking silently — as with the `src/` layout vs. Engineering Design §19's flat tree, where this file's `src/` layout wins and §19's tree is illustrative of module boundaries, not literal paths.
 
 ## Architecture Invariants — never violate these
 

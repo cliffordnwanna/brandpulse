@@ -1,0 +1,39 @@
+[project]
+name = "brandpulse"
+version = "0.1.0"
+description = "BrandPulse — AI-powered customer voice intelligence platform"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "google-play-scraper>=1.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "black>=24.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

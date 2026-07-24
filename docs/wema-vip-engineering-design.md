@@ -1,4 +1,4 @@
-# Wema Customer Voice Intelligence Platform (WVIP)
+# BrandPulse — Wema Customer Voice Intelligence Platform
 ## Engineering Design Document — v2.0
 **Companion to:** PRD v2.2
 **Purpose:** The PRD answers *what we're building and why*. This document answers *how every component works*, in enough detail that a senior engineer (or Claude Code) can build it without guessing. Nothing here changes the PRD's phases, metrics, or scope — this is the implementation contract underneath it.

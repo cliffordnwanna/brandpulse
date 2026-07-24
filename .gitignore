@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+storage/bronze/*
+!storage/bronze/.gitkeep
+storage/silver/*
+!storage/silver/.gitkeep
+storage/gold/*
+!storage/gold/.gitkeep
+output/*
+!output/.gitkeep

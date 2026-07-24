@@ -1,5 +1,8 @@
 # Milestone 4 — Bronze + Silver Storage
 
+## Carried forward from Milestone 3
+`Mention.search_term` is now nullable, and two new fields exist: `collection_scope` (`"keyword" | "app" | "channel" | "subreddit" | "forum"`) and `collection_target` (populated instead of `search_term` for non-keyword-scoped connectors, e.g. Google Play's app package ID). Silver-stage dedup/grouping logic must not assume `search_term` is always a string — check `collection_scope` first, and group/key on `collection_target` where `search_term` is `None`. See `schema.py`'s `Mention` docstring and `docs/EngineeringDesign.md` §2 for the full rationale (keyword-filtering at collection time was found to make Bronze permanently lossy and was removed from `GooglePlayConnector`).
+
 ## Objective
 Build the storage layer: Bronze (append-only, lightly normalized per connector contract) and Silver (cross-source/cross-run near-duplicate detection, language detection).
 

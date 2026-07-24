@@ -1,4 +1,4 @@
-# Wema Bank Customer Voice Intelligence Platform (WVIP)
+# BrandPulse — Wema Bank Customer Voice Intelligence Platform
 ### Product Requirements Document — v2.2
 **Owner:** Clifford Nwanna, Data Analytics & AI Team, Wema Bank
 **Status:** Approved for MVP build

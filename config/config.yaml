@@ -1,0 +1,47 @@
+sources:
+  - name: google_play
+    enabled: true
+    reliability: high
+  - name: app_store
+    enabled: true
+    reliability: high
+  - name: nairaland
+    enabled: true
+    reliability: medium
+  - name: youtube
+    enabled: true
+    reliability: high
+
+keywords:
+  base_list:
+    - "Wema"
+    - "Wema Bank"
+    - "ALAT"
+    - "ALAT by Wema"
+    - "Wema fraud"
+
+output:
+  directory: "./output/"
+  formats: ["csv", "json"]
+
+retry:
+  max_attempts: 3
+  backoff_seconds: [5, 30, 120]
+
+timeouts:
+  request_seconds: 20
+
+rate_limit:
+  requests_per_minute: 60
+  respect_robots_txt: true
+
+connectors:
+  google_play:
+    # Intentionally empty — do NOT guess/hardcode package IDs here.
+    # Verify the real Wema Bank / ALAT Google Play package names before the
+    # first real run and populate this list then. An empty list makes the
+    # connector return NO_RESULTS/unhealthy rather than fail confusingly.
+    app_ids: []
+    country: "ng"
+    language: "en"
+    max_reviews_per_run: 500

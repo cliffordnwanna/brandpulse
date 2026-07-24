@@ -1,4 +1,4 @@
-# Wema Customer Voice Intelligence Platform (WVIP)
+# BrandPulse — Wema Customer Voice Intelligence Platform
 ## Engineering Design Document — v2.0
 **Companion to:** PRD v2.2
 **Purpose:** The PRD answers *what we're building and why*. This document answers *how every component works*, in enough detail that a senior engineer (or Claude Code) can build it without guessing. Nothing here changes the PRD's phases, metrics, or scope — this is the implementation contract underneath it.
@@ -66,7 +66,9 @@ Every connector, regardless of source, emits exactly this schema. No exceptions 
   "mention_id": "SHA256 hash of (platform, url, timestamp, normalized_text) — see §5",
   "platform": "google_play | app_store | nairaland | youtube | reddit | ...",
   "source_type": "review | comment | post | forum_reply",
-  "search_term": "the keyword/query that surfaced this record",
+  "collection_scope": "keyword | app | channel | subreddit | forum — how this record was collected",
+  "search_term": "the keyword/query that surfaced this record — null unless collection_scope=keyword",
+  "collection_target": "the concrete thing collected against (app package ID, channel ID, subreddit name) — null unless collection_scope is a non-keyword scope",
   "author": "public handle or reviewer name — never a real customer identity",
   "url": "canonical link back to the original content",
   "text": "comment/review text, UTF-8-safe and lightly normalized per connector contract (§3)",
@@ -81,6 +83,8 @@ Every connector, regardless of source, emits exactly this schema. No exceptions 
 ```
 
 This is the single most important design decision in the system: **everything downstream assumes this shape and nothing else.**
+
+**`collection_scope`/`collection_target` vs. relevance filtering:** some sources (Nairaland, forum search) are genuinely keyword-searched at collection time — for those, `collection_scope="keyword"` and `search_term` is populated. Other sources (Google Play app reviews, a fixed YouTube channel) collect *everything available* for a fixed target and have no keyword concept at retrieval time at all — for those, `collection_scope` is the appropriate non-keyword value (`"app"`, `"channel"`, etc.) and `collection_target` holds the concrete thing collected against (app package ID, channel ID). **A connector never filters by keyword/relevance before Bronze** — doing so would make Bronze permanently lossy: a review that doesn't literally contain a configured keyword might still be relevant (misspellings, aliases, indirect complaints), and adding a new alias later would require re-scraping instead of reprocessing Bronze, breaking the "Silver/Gold regenerable from Bronze alone" guarantee (§9). Keyword/entity relevance matching is a Silver-or-later concern that operates on full, unfiltered Bronze text.
 
 ---
 

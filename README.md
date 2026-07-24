@@ -1,6 +1,10 @@
-# Wema Customer Voice Intelligence Platform (WVIP)
+# BrandPulse
 
-MVP: keyword + timeframe in, classified sentiment/complaint report out — across Google Play, App Store, Nairaland, and YouTube.
+### AI-Powered Customer Voice Intelligence Platform
+
+> Turn public conversations into actionable customer intelligence.
+
+Built for Wema Bank and ALAT: keyword + timeframe in, classified sentiment/complaint report out — across Google Play, App Store, Nairaland, and YouTube.
 
 ## Docs
 
@@ -16,4 +20,4 @@ This project is built one milestone at a time, each reviewed before the next sta
 
 ## Status
 
-Milestone 1 not yet started.
+Milestone 1 (Project Scaffolding) complete, pending human review. Package lives under `src/brandpulse/`.
