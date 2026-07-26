@@ -1,0 +1,501 @@
+mention_id,text,label,synthetic
+synthetic-spam-0028,"Make 500k weekly from home, DM me for details. (#28)",Spam,true
+synthetic-spam-0016,Follow my page for forex trading tips and guaranteed profit. (#16),Spam,true
+synthetic-spam-0030,"Buy followers cheap, message me on WhatsApp for pricing. (#30)",Spam,true
+synthetic-mixed-0023,"Great support this time, though my last two complaints went unanswered. (#23)",Mixed,true
+synthetic-negative-0047,The ATM swallowed my card and nobody at the branch could help. (#47),Negative,true
+synthetic-mixed-0043,"Fast service at the branch, but ATM is often out of cash. (#43)",Mixed,true
+synthetic-negative-0019,"Worst banking app I have ever used, constant login issues. (#19)",Negative,true
+synthetic-negative-0006,"Worst banking app I have ever used, constant login issues.",Negative,true
+synthetic-spam-0029,"This is not about banking, check out my new music video. (#29)",Spam,true
+synthetic-mixed-0064,"Account opening was easy, but KYC verification dragged on for weeks. (#64)",Mixed,true
+synthetic-positive-0063,"Great experience with the USSD code, worked first try. (#63)",Positive,true
+synthetic-negative-0051,"I think this is fraud, someone accessed my account without my consent. (#51)",Negative,true
+synthetic-negative-0068,"This app dey stress me well well, e no dey work at all. (#68)",Negative,true
+synthetic-negative-0075,"Terrible customer service, I have been on hold for over an hour. (#75)",Negative,true
+synthetic-positive-0091,Really happy with how quickly my loan was approved. (#91),Positive,true
+synthetic-negative-0064,"Worst banking app I have ever used, constant login issues. (#64)",Negative,true
+synthetic-neutral-0081,What time does the Ikeja branch close today? (#81),Neutral,true
+synthetic-positive-0051,Really happy with how quickly my loan was approved. (#51),Positive,true
+synthetic-negative-0060,"Terrible customer service, I have been on hold for over an hour. (#60)",Negative,true
+synthetic-positive-0040,"Their support team resolved my card issue quickly, very impressed. (#40)",Positive,true
+synthetic-neutral-0096,How do I update my BVN details on the app? (#96),Neutral,true
+synthetic-spam-0043,"Sharing my crypto giveaway link, first 100 people get free coins. (#43)",Spam,true
+synthetic-negative-0098,The ATM swallowed my card and nobody at the branch could help. (#98),Negative,true
+synthetic-positive-0008,"Wema Bank app dey work well well, no wahala at all.",Positive,true
+synthetic-mixed-0031,"Customer care was helpful, but it took forever to reach them. (#31)",Mixed,true
+synthetic-negative-0007,"Charges on this account are ridiculous, they take money for nothing.",Negative,true
+synthetic-positive-0082,"Their support team resolved my card issue quickly, very impressed. (#82)",Positive,true
+synthetic-mixed-0028,"Fast service at the branch, but ATM is often out of cash. (#28)",Mixed,true
+synthetic-neutral-0074,Just checking if the new update is out yet. (#74),Neutral,true
+synthetic-negative-0061,The ATM swallowed my card and nobody at the branch could help. (#61),Negative,true
+synthetic-positive-0024,Thank you Wema for fixing the login issue so fast. (#24),Positive,true
+synthetic-spam-0087,"This is not about banking, check out my new music video. (#87)",Spam,true
+synthetic-neutral-0006,How do I update my BVN details on the app?,Neutral,true
+synthetic-spam-0021,Follow my page for forex trading tips and guaranteed profit. (#21),Spam,true
+synthetic-spam-0041,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#41),Spam,true
+synthetic-spam-0092,"Sharing my crypto giveaway link, first 100 people get free coins. (#92)",Spam,true
+synthetic-positive-0001,"The new update made transfers so much faster, well done!",Positive,true
+synthetic-negative-0091,"This app dey stress me well well, e no dey work at all. (#91)",Negative,true
+synthetic-spam-0054,"This is not about banking, check out my new music video. (#54)",Spam,true
+synthetic-negative-0090,The ATM swallowed my card and nobody at the branch could help. (#90),Negative,true
+synthetic-negative-0000,The ATM swallowed my card and nobody at the branch could help.,Negative,true
+synthetic-spam-0090,"Investment opportunity, double your money in 7 days guaranteed. (#90)",Spam,true
+synthetic-spam-0031,Random test comment asdkjhaskjdh 12345. (#31),Spam,true
+synthetic-positive-0005,"Excellent customer service today, my issue was resolved in minutes.",Positive,true
+synthetic-spam-0064,"Buy followers cheap, message me on WhatsApp for pricing. (#64)",Spam,true
+synthetic-spam-0058,Random test comment asdkjhaskjdh 12345. (#58),Spam,true
+synthetic-positive-0067,"Their support team resolved my card issue quickly, very impressed. (#67)",Positive,true
+synthetic-mixed-0087,I like the new interface but login still fails sometimes. (#87),Mixed,true
+synthetic-positive-0017,Really happy with how quickly my loan was approved. (#17),Positive,true
+synthetic-positive-0073,"Excellent customer service today, my issue was resolved in minutes. (#73)",Positive,true
+synthetic-negative-0093,My transfer failed three times today and no one from support responded. (#93),Negative,true
+synthetic-neutral-0054,Does this bank support USSD transfers to other banks? (#54),Neutral,true
+synthetic-positive-0044,Thank you Wema for fixing the login issue so fast. (#44),Positive,true
+synthetic-mixed-0083,"Great support this time, though my last two complaints went unanswered. (#83)",Mixed,true
+synthetic-neutral-0061,Does this bank support USSD transfers to other banks? (#61),Neutral,true
+synthetic-negative-0086,"I think this is fraud, someone accessed my account without my consent. (#86)",Negative,true
+synthetic-mixed-0070,The USSD code works fine but the app itself keeps crashing. (#70),Mixed,true
+synthetic-neutral-0000,How do I update my BVN details on the app?,Neutral,true
+synthetic-neutral-0041,Does this bank support USSD transfers to other banks? (#41),Neutral,true
+synthetic-neutral-0095,Can I use ALAT outside Nigeria? (#95),Neutral,true
+synthetic-neutral-0098,Just checking if the new update is out yet. (#98),Neutral,true
+synthetic-spam-0033,Random test comment asdkjhaskjdh 12345. (#33),Spam,true
+synthetic-positive-0050,"Great experience with the USSD code, worked first try. (#50)",Positive,true
+synthetic-spam-0037,"This is not about banking, check out my new music video. (#37)",Spam,true
+synthetic-neutral-0016,How long does KYC verification usually take? (#16),Neutral,true
+synthetic-positive-0095,"Smooth and reliable app, best banking experience so far. (#95)",Positive,true
+synthetic-neutral-0067,What documents are needed to open a savings account? (#67),Neutral,true
+synthetic-positive-0034,"Their support team resolved my card issue quickly, very impressed. (#34)",Positive,true
+synthetic-positive-0019,The app is fast and the interface is very easy to use. (#19),Positive,true
+synthetic-negative-0017,I was wrongly debited twice and still no refund after a week. (#17),Negative,true
+synthetic-negative-0083,"Charges on this account are ridiculous, they take money for nothing. (#83)",Negative,true
+synthetic-mixed-0051,I like the new interface but login still fails sometimes. (#51),Mixed,true
+synthetic-mixed-0060,"Nice app design, but I still experience random login issues. (#60)",Mixed,true
+synthetic-neutral-0009,What documents are needed to open a savings account?,Neutral,true
+synthetic-positive-0096,Thank you Wema for fixing the login issue so fast. (#96),Positive,true
+synthetic-positive-0098,"Great experience with the USSD code, worked first try. (#98)",Positive,true
+synthetic-positive-0089,"Wema Bank app dey work well well, no wahala at all. (#89)",Positive,true
+synthetic-spam-0026,"Buy followers cheap, message me on WhatsApp for pricing. (#26)",Spam,true
+synthetic-mixed-0074,"Account opening was easy, but KYC verification dragged on for weeks. (#74)",Mixed,true
+synthetic-positive-0036,"Wema Bank app dey work well well, no wahala at all. (#36)",Positive,true
+synthetic-negative-0057,My transfer failed three times today and no one from support responded. (#57),Negative,true
+synthetic-spam-0088,"This is not about banking, check out my new music video. (#88)",Spam,true
+synthetic-spam-0068,"This is not about banking, check out my new music video. (#68)",Spam,true
+synthetic-positive-0060,I love how easy it is to open an account with ALAT. (#60),Positive,true
+synthetic-negative-0044,"Terrible customer service, I have been on hold for over an hour. (#44)",Negative,true
+synthetic-negative-0013,"This app dey stress me well well, e no dey work at all. (#13)",Negative,true
+synthetic-neutral-0082,What is the current exchange rate on this platform? (#82),Neutral,true
+synthetic-positive-0000,"Wema Bank app dey work well well, no wahala at all.",Positive,true
+synthetic-mixed-0030,I like the new interface but login still fails sometimes. (#30),Mixed,true
+synthetic-mixed-0015,I like the new interface but login still fails sometimes. (#15),Mixed,true
+synthetic-negative-0055,App keeps crashing every time I try to check my balance. (#55),Negative,true
+synthetic-neutral-0052,How do I update my BVN details on the app? (#52),Neutral,true
+synthetic-neutral-0011,Just checking if the new update is out yet. (#11),Neutral,true
+synthetic-mixed-0009,The USSD code works fine but the app itself keeps crashing.,Mixed,true
+synthetic-mixed-0005,"Great support this time, though my last two complaints went unanswered.",Mixed,true
+synthetic-negative-0087,Still waiting for my credit to reflect since three days ago. (#87),Negative,true
+synthetic-positive-0033,I love how easy it is to open an account with ALAT. (#33),Positive,true
+synthetic-positive-0027,"The new update made transfers so much faster, well done! (#27)",Positive,true
+synthetic-mixed-0050,"Fast service at the branch, but ATM is often out of cash. (#50)",Mixed,true
+synthetic-negative-0095,"I think this is fraud, someone accessed my account without my consent. (#95)",Negative,true
+synthetic-spam-0014,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#14),Spam,true
+synthetic-spam-0075,Random test comment asdkjhaskjdh 12345. (#75),Spam,true
+synthetic-neutral-0013,Does this bank support USSD transfers to other banks? (#13),Neutral,true
+synthetic-spam-0015,"Unrelated advert: best generator prices in Lagos, call now. (#15)",Spam,true
+synthetic-mixed-0016,The USSD code works fine but the app itself keeps crashing. (#16),Mixed,true
+synthetic-neutral-0046,How long does KYC verification usually take? (#46),Neutral,true
+synthetic-neutral-0045,How do I update my BVN details on the app? (#45),Neutral,true
+synthetic-mixed-0099,"Great support this time, though my last two complaints went unanswered. (#99)",Mixed,true
+synthetic-neutral-0034,Just checking if the new update is out yet. (#34),Neutral,true
+synthetic-spam-0069,Random test comment asdkjhaskjdh 12345. (#69),Spam,true
+synthetic-negative-0010,I was wrongly debited twice and still no refund after a week. (#10),Negative,true
+synthetic-mixed-0048,"Transfers work great, but the charges are way too high. (#48)",Mixed,true
+synthetic-spam-0089,Follow my page for forex trading tips and guaranteed profit. (#89),Spam,true
+synthetic-positive-0057,I love how easy it is to open an account with ALAT. (#57),Positive,true
+synthetic-neutral-0020,Just checking if the new update is out yet. (#20),Neutral,true
+synthetic-neutral-0031,Can I use ALAT outside Nigeria? (#31),Neutral,true
+synthetic-spam-0062,"Investment opportunity, double your money in 7 days guaranteed. (#62)",Spam,true
+synthetic-positive-0028,"Excellent customer service today, my issue was resolved in minutes. (#28)",Positive,true
+synthetic-positive-0079,"Great experience with the USSD code, worked first try. (#79)",Positive,true
+synthetic-spam-0038,"Congratulations, you have been selected for a cash reward, claim now. (#38)",Spam,true
+synthetic-positive-0076,"Excellent customer service today, my issue was resolved in minutes. (#76)",Positive,true
+synthetic-negative-0028,My transfer failed three times today and no one from support responded. (#28),Negative,true
+synthetic-positive-0053,Really happy with how quickly my loan was approved. (#53),Positive,true
+synthetic-mixed-0001,The app is fast but customer service is really slow to respond.,Mixed,true
+synthetic-neutral-0029,How do I update my BVN details on the app? (#29),Neutral,true
+synthetic-mixed-0058,The USSD code works fine but the app itself keeps crashing. (#58),Mixed,true
+synthetic-mixed-0075,"Fast service at the branch, but ATM is often out of cash. (#75)",Mixed,true
+synthetic-mixed-0014,"Account opening was easy, but KYC verification dragged on for weeks. (#14)",Mixed,true
+synthetic-mixed-0071,I like the new interface but login still fails sometimes. (#71),Mixed,true
+synthetic-negative-0030,"I think this is fraud, someone accessed my account without my consent. (#30)",Negative,true
+synthetic-neutral-0084,Where can I find my account statement in the app? (#84),Neutral,true
+synthetic-mixed-0054,"Great support this time, though my last two complaints went unanswered. (#54)",Mixed,true
+synthetic-positive-0018,"The new update made transfers so much faster, well done! (#18)",Positive,true
+synthetic-negative-0049,App keeps crashing every time I try to check my balance. (#49),Negative,true
+synthetic-mixed-0006,"Great support this time, though my last two complaints went unanswered.",Mixed,true
+synthetic-positive-0016,The app is fast and the interface is very easy to use. (#16),Positive,true
+synthetic-positive-0029,"Smooth and reliable app, best banking experience so far. (#29)",Positive,true
+synthetic-negative-0043,"This app dey stress me well well, e no dey work at all. (#43)",Negative,true
+synthetic-negative-0081,The ATM swallowed my card and nobody at the branch could help. (#81),Negative,true
+synthetic-negative-0053,My transfer failed three times today and no one from support responded. (#53),Negative,true
+synthetic-mixed-0078,"Transfers work great, but the charges are way too high. (#78)",Mixed,true
+synthetic-spam-0013,"Investment opportunity, double your money in 7 days guaranteed. (#13)",Spam,true
+synthetic-spam-0025,"Investment opportunity, double your money in 7 days guaranteed. (#25)",Spam,true
+synthetic-mixed-0038,"Fast service at the branch, but ATM is often out of cash. (#38)",Mixed,true
+synthetic-mixed-0096,"Customer care was helpful, but it took forever to reach them. (#96)",Mixed,true
+synthetic-negative-0066,"This app dey stress me well well, e no dey work at all. (#66)",Negative,true
+synthetic-mixed-0097,"Fast service at the branch, but ATM is often out of cash. (#97)",Mixed,true
+synthetic-spam-0080,"Congratulations, you have been selected for a cash reward, claim now. (#80)",Spam,true
+synthetic-spam-0023,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#23),Spam,true
+synthetic-mixed-0046,I like the new interface but login still fails sometimes. (#46),Mixed,true
+synthetic-mixed-0066,The app is fast but customer service is really slow to respond. (#66),Mixed,true
+synthetic-positive-0074,The app is fast and the interface is very easy to use. (#74),Positive,true
+synthetic-neutral-0060,What time does the Ikeja branch close today? (#60),Neutral,true
+synthetic-neutral-0089,How do I update my BVN details on the app? (#89),Neutral,true
+synthetic-positive-0011,"The new update made transfers so much faster, well done! (#11)",Positive,true
+synthetic-negative-0070,I was wrongly debited twice and still no refund after a week. (#70),Negative,true
+synthetic-mixed-0082,"Customer care was helpful, but it took forever to reach them. (#82)",Mixed,true
+synthetic-negative-0036,I was wrongly debited twice and still no refund after a week. (#36),Negative,true
+synthetic-spam-0099,"Unrelated advert: best generator prices in Lagos, call now. (#99)",Spam,true
+synthetic-mixed-0089,The USSD code works fine but the app itself keeps crashing. (#89),Mixed,true
+synthetic-positive-0045,The app is fast and the interface is very easy to use. (#45),Positive,true
+synthetic-positive-0092,"Their support team resolved my card issue quickly, very impressed. (#92)",Positive,true
+synthetic-neutral-0093,How do I update my BVN details on the app? (#93),Neutral,true
+synthetic-neutral-0005,Is there a limit on daily ATM withdrawals?,Neutral,true
+synthetic-negative-0073,"I think this is fraud, someone accessed my account without my consent. (#73)",Negative,true
+synthetic-mixed-0034,"Customer care was helpful, but it took forever to reach them. (#34)",Mixed,true
+synthetic-positive-0072,Really happy with how quickly my loan was approved. (#72),Positive,true
+synthetic-neutral-0027,How long does KYC verification usually take? (#27),Neutral,true
+synthetic-negative-0034,"Terrible customer service, I have been on hold for over an hour. (#34)",Negative,true
+synthetic-negative-0050,I was wrongly debited twice and still no refund after a week. (#50),Negative,true
+synthetic-neutral-0024,Is there a limit on daily ATM withdrawals? (#24),Neutral,true
+synthetic-negative-0023,"Worst banking app I have ever used, constant login issues. (#23)",Negative,true
+synthetic-neutral-0090,Does this bank support USSD transfers to other banks? (#90),Neutral,true
+synthetic-negative-0078,"Charges on this account are ridiculous, they take money for nothing. (#78)",Negative,true
+synthetic-spam-0085,Random test comment asdkjhaskjdh 12345. (#85),Spam,true
+synthetic-neutral-0057,How long does KYC verification usually take? (#57),Neutral,true
+synthetic-spam-0005,Click here to win a free iPhone now!!! www.totally-legit-prize.example,Spam,true
+synthetic-positive-0080,The app is fast and the interface is very easy to use. (#80),Positive,true
+synthetic-positive-0049,The app is fast and the interface is very easy to use. (#49),Positive,true
+synthetic-positive-0030,"Their support team resolved my card issue quickly, very impressed. (#30)",Positive,true
+synthetic-positive-0059,"Wema Bank app dey work well well, no wahala at all. (#59)",Positive,true
+synthetic-mixed-0002,"Great support this time, though my last two complaints went unanswered.",Mixed,true
+synthetic-negative-0097,"Worst banking app I have ever used, constant login issues. (#97)",Negative,true
+synthetic-mixed-0032,"Transfers work great, but the charges are way too high. (#32)",Mixed,true
+synthetic-negative-0016,I was wrongly debited twice and still no refund after a week. (#16),Negative,true
+synthetic-spam-0024,Follow my page for forex trading tips and guaranteed profit. (#24),Spam,true
+synthetic-spam-0036,"Make 500k weekly from home, DM me for details. (#36)",Spam,true
+synthetic-mixed-0045,"Transfers work great, but the charges are way too high. (#45)",Mixed,true
+synthetic-spam-0001,Follow my page for forex trading tips and guaranteed profit.,Spam,true
+synthetic-mixed-0025,"Transfers work great, but the charges are way too high. (#25)",Mixed,true
+synthetic-positive-0088,"Great experience with the USSD code, worked first try. (#88)",Positive,true
+synthetic-negative-0035,"Charges on this account are ridiculous, they take money for nothing. (#35)",Negative,true
+synthetic-spam-0008,"Investment opportunity, double your money in 7 days guaranteed.",Spam,true
+synthetic-neutral-0010,How long does KYC verification usually take? (#10),Neutral,true
+synthetic-positive-0094,Thank you Wema for fixing the login issue so fast. (#94),Positive,true
+synthetic-negative-0048,I was wrongly debited twice and still no refund after a week. (#48),Negative,true
+synthetic-mixed-0079,I like the new interface but login still fails sometimes. (#79),Mixed,true
+synthetic-neutral-0064,Can I use ALAT outside Nigeria? (#64),Neutral,true
+synthetic-spam-0065,"Sharing my crypto giveaway link, first 100 people get free coins. (#65)",Spam,true
+synthetic-neutral-0078,What time does the Ikeja branch close today? (#78),Neutral,true
+synthetic-negative-0003,"Terrible customer service, I have been on hold for over an hour.",Negative,true
+synthetic-positive-0056,"The new update made transfers so much faster, well done! (#56)",Positive,true
+synthetic-spam-0055,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#55),Spam,true
+synthetic-spam-0074,"This is not about banking, check out my new music video. (#74)",Spam,true
+synthetic-positive-0004,I love how easy it is to open an account with ALAT.,Positive,true
+synthetic-neutral-0002,Just checking if the new update is out yet.,Neutral,true
+synthetic-mixed-0011,"Customer care was helpful, but it took forever to reach them. (#11)",Mixed,true
+synthetic-neutral-0070,How long does KYC verification usually take? (#70),Neutral,true
+synthetic-negative-0082,"Terrible customer service, I have been on hold for over an hour. (#82)",Negative,true
+synthetic-neutral-0056,How long does KYC verification usually take? (#56),Neutral,true
+synthetic-negative-0021,"Charges on this account are ridiculous, they take money for nothing. (#21)",Negative,true
+synthetic-negative-0076,"I think this is fraud, someone accessed my account without my consent. (#76)",Negative,true
+synthetic-spam-0084,"Investment opportunity, double your money in 7 days guaranteed. (#84)",Spam,true
+synthetic-mixed-0021,"Nice app design, but I still experience random login issues. (#21)",Mixed,true
+synthetic-spam-0020,"This is not about banking, check out my new music video. (#20)",Spam,true
+synthetic-neutral-0055,Can I use ALAT outside Nigeria? (#55),Neutral,true
+synthetic-negative-0004,"Worst banking app I have ever used, constant login issues.",Negative,true
+synthetic-negative-0084,App keeps crashing every time I try to check my balance. (#84),Negative,true
+synthetic-spam-0018,"Unrelated advert: best generator prices in Lagos, call now. (#18)",Spam,true
+synthetic-mixed-0059,"Fast service at the branch, but ATM is often out of cash. (#59)",Mixed,true
+synthetic-positive-0048,"Wema Bank app dey work well well, no wahala at all. (#48)",Positive,true
+synthetic-spam-0078,"Investment opportunity, double your money in 7 days guaranteed. (#78)",Spam,true
+synthetic-spam-0052,"Sharing my crypto giveaway link, first 100 people get free coins. (#52)",Spam,true
+synthetic-spam-0003,"Congratulations, you have been selected for a cash reward, claim now.",Spam,true
+synthetic-mixed-0090,"Customer care was helpful, but it took forever to reach them. (#90)",Mixed,true
+synthetic-spam-0022,Follow my page for forex trading tips and guaranteed profit. (#22),Spam,true
+synthetic-spam-0071,"Investment opportunity, double your money in 7 days guaranteed. (#71)",Spam,true
+synthetic-mixed-0063,"Transfers work great, but the charges are way too high. (#63)",Mixed,true
+synthetic-neutral-0069,Where can I find my account statement in the app? (#69),Neutral,true
+synthetic-neutral-0051,What time does the Ikeja branch close today? (#51),Neutral,true
+synthetic-positive-0087,"Smooth and reliable app, best banking experience so far. (#87)",Positive,true
+synthetic-positive-0066,"Excellent customer service today, my issue was resolved in minutes. (#66)",Positive,true
+synthetic-spam-0057,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#57),Spam,true
+synthetic-neutral-0062,Can I use ALAT outside Nigeria? (#62),Neutral,true
+synthetic-neutral-0068,Can I use ALAT outside Nigeria? (#68),Neutral,true
+synthetic-neutral-0083,How long does KYC verification usually take? (#83),Neutral,true
+synthetic-positive-0046,"Wema Bank app dey work well well, no wahala at all. (#46)",Positive,true
+synthetic-neutral-0092,What is the current exchange rate on this platform? (#92),Neutral,true
+synthetic-spam-0046,"Buy followers cheap, message me on WhatsApp for pricing. (#46)",Spam,true
+synthetic-mixed-0007,"Fast service at the branch, but ATM is often out of cash.",Mixed,true
+synthetic-positive-0007,The app is fast and the interface is very easy to use.,Positive,true
+synthetic-spam-0094,"Unrelated advert: best generator prices in Lagos, call now. (#94)",Spam,true
+synthetic-positive-0097,"Excellent customer service today, my issue was resolved in minutes. (#97)",Positive,true
+synthetic-spam-0049,Random test comment asdkjhaskjdh 12345. (#49),Spam,true
+synthetic-negative-0056,Still waiting for my credit to reflect since three days ago. (#56),Negative,true
+synthetic-spam-0097,Follow my page for forex trading tips and guaranteed profit. (#97),Spam,true
+synthetic-mixed-0088,The app is fast but customer service is really slow to respond. (#88),Mixed,true
+synthetic-neutral-0087,What time does the Ikeja branch close today? (#87),Neutral,true
+synthetic-spam-0070,"This is not about banking, check out my new music video. (#70)",Spam,true
+synthetic-spam-0079,"Investment opportunity, double your money in 7 days guaranteed. (#79)",Spam,true
+synthetic-spam-0000,"Congratulations, you have been selected for a cash reward, claim now.",Spam,true
+synthetic-positive-0071,"Wema Bank app dey work well well, no wahala at all. (#71)",Positive,true
+synthetic-positive-0022,"Smooth and reliable app, best banking experience so far. (#22)",Positive,true
+synthetic-spam-0081,"Sharing my crypto giveaway link, first 100 people get free coins. (#81)",Spam,true
+synthetic-spam-0095,"Unrelated advert: best generator prices in Lagos, call now. (#95)",Spam,true
+synthetic-spam-0073,"Investment opportunity, double your money in 7 days guaranteed. (#73)",Spam,true
+synthetic-negative-0065,"This app dey stress me well well, e no dey work at all. (#65)",Negative,true
+synthetic-negative-0037,Still waiting for my credit to reflect since three days ago. (#37),Negative,true
+synthetic-mixed-0053,The USSD code works fine but the app itself keeps crashing. (#53),Mixed,true
+synthetic-neutral-0097,What is the current exchange rate on this platform? (#97),Neutral,true
+synthetic-neutral-0047,Where can I find my account statement in the app? (#47),Neutral,true
+synthetic-negative-0038,My transfer failed three times today and no one from support responded. (#38),Negative,true
+synthetic-spam-0044,"Investment opportunity, double your money in 7 days guaranteed. (#44)",Spam,true
+synthetic-neutral-0022,How do I update my BVN details on the app? (#22),Neutral,true
+synthetic-spam-0027,"This is not about banking, check out my new music video. (#27)",Spam,true
+synthetic-neutral-0035,Just checking if the new update is out yet. (#35),Neutral,true
+synthetic-negative-0085,Still waiting for my credit to reflect since three days ago. (#85),Negative,true
+synthetic-neutral-0021,How do I update my BVN details on the app? (#21),Neutral,true
+synthetic-spam-0048,"Sharing my crypto giveaway link, first 100 people get free coins. (#48)",Spam,true
+synthetic-neutral-0050,Where can I find my account statement in the app? (#50),Neutral,true
+synthetic-mixed-0019,"Transfers work great, but the charges are way too high. (#19)",Mixed,true
+synthetic-positive-0006,"Wema Bank app dey work well well, no wahala at all.",Positive,true
+synthetic-negative-0074,I was wrongly debited twice and still no refund after a week. (#74),Negative,true
+synthetic-neutral-0059,Can I use ALAT outside Nigeria? (#59),Neutral,true
+synthetic-mixed-0010,"Good rates on loans, though the approval process was frustrating. (#10)",Mixed,true
+synthetic-negative-0089,The ATM swallowed my card and nobody at the branch could help. (#89),Negative,true
+synthetic-mixed-0033,"Good rates on loans, though the approval process was frustrating. (#33)",Mixed,true
+synthetic-neutral-0072,Just checking if the new update is out yet. (#72),Neutral,true
+synthetic-negative-0077,"Worst banking app I have ever used, constant login issues. (#77)",Negative,true
+synthetic-positive-0021,The app is fast and the interface is very easy to use. (#21),Positive,true
+synthetic-positive-0061,"Wema Bank app dey work well well, no wahala at all. (#61)",Positive,true
+synthetic-negative-0054,"Worst banking app I have ever used, constant login issues. (#54)",Negative,true
+synthetic-positive-0052,"Their support team resolved my card issue quickly, very impressed. (#52)",Positive,true
+synthetic-spam-0056,"Investment opportunity, double your money in 7 days guaranteed. (#56)",Spam,true
+synthetic-positive-0038,"Wema Bank app dey work well well, no wahala at all. (#38)",Positive,true
+synthetic-spam-0077,Follow my page for forex trading tips and guaranteed profit. (#77),Spam,true
+synthetic-neutral-0003,How do I update my BVN details on the app?,Neutral,true
+synthetic-negative-0092,App keeps crashing every time I try to check my balance. (#92),Negative,true
+synthetic-neutral-0091,How do I update my BVN details on the app? (#91),Neutral,true
+synthetic-mixed-0036,I like the new interface but login still fails sometimes. (#36),Mixed,true
+synthetic-positive-0055,"Wema Bank app dey work well well, no wahala at all. (#55)",Positive,true
+synthetic-negative-0059,App keeps crashing every time I try to check my balance. (#59),Negative,true
+synthetic-positive-0083,"The new update made transfers so much faster, well done! (#83)",Positive,true
+synthetic-mixed-0000,"Great support this time, though my last two complaints went unanswered.",Mixed,true
+synthetic-positive-0085,"The new update made transfers so much faster, well done! (#85)",Positive,true
+synthetic-negative-0088,"This app dey stress me well well, e no dey work at all. (#88)",Negative,true
+synthetic-negative-0031,"Terrible customer service, I have been on hold for over an hour. (#31)",Negative,true
+synthetic-mixed-0077,"Transfers work great, but the charges are way too high. (#77)",Mixed,true
+synthetic-negative-0011,"I think this is fraud, someone accessed my account without my consent. (#11)",Negative,true
+synthetic-spam-0093,"Buy followers cheap, message me on WhatsApp for pricing. (#93)",Spam,true
+synthetic-positive-0058,"Great experience with the USSD code, worked first try. (#58)",Positive,true
+synthetic-neutral-0042,What documents are needed to open a savings account? (#42),Neutral,true
+synthetic-positive-0064,Thank you Wema for fixing the login issue so fast. (#64),Positive,true
+synthetic-spam-0002,"Congratulations, you have been selected for a cash reward, claim now.",Spam,true
+synthetic-mixed-0085,I like the new interface but login still fails sometimes. (#85),Mixed,true
+synthetic-mixed-0069,I like the new interface but login still fails sometimes. (#69),Mixed,true
+synthetic-negative-0002,"I think this is fraud, someone accessed my account without my consent.",Negative,true
+synthetic-spam-0032,"Investment opportunity, double your money in 7 days guaranteed. (#32)",Spam,true
+synthetic-positive-0015,I love how easy it is to open an account with ALAT. (#15),Positive,true
+synthetic-positive-0020,I love how easy it is to open an account with ALAT. (#20),Positive,true
+synthetic-positive-0035,"Wema Bank app dey work well well, no wahala at all. (#35)",Positive,true
+synthetic-negative-0014,My transfer failed three times today and no one from support responded. (#14),Negative,true
+synthetic-negative-0079,The ATM swallowed my card and nobody at the branch could help. (#79),Negative,true
+synthetic-positive-0026,"Great experience with the USSD code, worked first try. (#26)",Positive,true
+synthetic-spam-0096,"Unrelated advert: best generator prices in Lagos, call now. (#96)",Spam,true
+synthetic-positive-0009,Really happy with how quickly my loan was approved.,Positive,true
+synthetic-neutral-0040,Can I use ALAT outside Nigeria? (#40),Neutral,true
+synthetic-mixed-0091,The app is fast but customer service is really slow to respond. (#91),Mixed,true
+synthetic-negative-0029,"This app dey stress me well well, e no dey work at all. (#29)",Negative,true
+synthetic-mixed-0073,"Fast service at the branch, but ATM is often out of cash. (#73)",Mixed,true
+synthetic-negative-0042,"I think this is fraud, someone accessed my account without my consent. (#42)",Negative,true
+synthetic-mixed-0027,"Good rates on loans, though the approval process was frustrating. (#27)",Mixed,true
+synthetic-mixed-0049,"Transfers work great, but the charges are way too high. (#49)",Mixed,true
+synthetic-spam-0009,Follow my page for forex trading tips and guaranteed profit.,Spam,true
+synthetic-neutral-0032,Is there a limit on daily ATM withdrawals? (#32),Neutral,true
+synthetic-negative-0008,App keeps crashing every time I try to check my balance.,Negative,true
+synthetic-negative-0067,Still waiting for my credit to reflect since three days ago. (#67),Negative,true
+synthetic-spam-0098,Random test comment asdkjhaskjdh 12345. (#98),Spam,true
+synthetic-negative-0033,"This app dey stress me well well, e no dey work at all. (#33)",Negative,true
+synthetic-spam-0039,"Sharing my crypto giveaway link, first 100 people get free coins. (#39)",Spam,true
+synthetic-positive-0093,I love how easy it is to open an account with ALAT. (#93),Positive,true
+synthetic-neutral-0036,Just checking if the new update is out yet. (#36),Neutral,true
+synthetic-positive-0069,I love how easy it is to open an account with ALAT. (#69),Positive,true
+synthetic-neutral-0019,Can I use ALAT outside Nigeria? (#19),Neutral,true
+synthetic-mixed-0029,The USSD code works fine but the app itself keeps crashing. (#29),Mixed,true
+synthetic-positive-0042,"Great experience with the USSD code, worked first try. (#42)",Positive,true
+synthetic-mixed-0040,"Great support this time, though my last two complaints went unanswered. (#40)",Mixed,true
+synthetic-neutral-0088,Where can I find my account statement in the app? (#88),Neutral,true
+synthetic-mixed-0003,"Transfers work great, but the charges are way too high.",Mixed,true
+synthetic-neutral-0001,What time does the Ikeja branch close today?,Neutral,true
+synthetic-positive-0013,"Wema Bank app dey work well well, no wahala at all. (#13)",Positive,true
+synthetic-neutral-0073,What documents are needed to open a savings account? (#73),Neutral,true
+synthetic-mixed-0018,"Customer care was helpful, but it took forever to reach them. (#18)",Mixed,true
+synthetic-positive-0065,"Their support team resolved my card issue quickly, very impressed. (#65)",Positive,true
+synthetic-neutral-0039,Does this bank support USSD transfers to other banks? (#39),Neutral,true
+synthetic-positive-0084,I love how easy it is to open an account with ALAT. (#84),Positive,true
+synthetic-neutral-0007,Where can I find my account statement in the app?,Neutral,true
+synthetic-mixed-0047,The USSD code works fine but the app itself keeps crashing. (#47),Mixed,true
+synthetic-mixed-0042,The app is fast but customer service is really slow to respond. (#42),Mixed,true
+synthetic-negative-0072,Still waiting for my credit to reflect since three days ago. (#72),Negative,true
+synthetic-mixed-0062,The app is fast but customer service is really slow to respond. (#62),Mixed,true
+synthetic-positive-0014,I love how easy it is to open an account with ALAT. (#14),Positive,true
+synthetic-spam-0004,"Investment opportunity, double your money in 7 days guaranteed.",Spam,true
+synthetic-neutral-0023,Can I use ALAT outside Nigeria? (#23),Neutral,true
+synthetic-mixed-0095,"Transfers work great, but the charges are way too high. (#95)",Mixed,true
+synthetic-mixed-0057,"Good rates on loans, though the approval process was frustrating. (#57)",Mixed,true
+synthetic-neutral-0049,What time does the Ikeja branch close today? (#49),Neutral,true
+synthetic-spam-0045,"Buy followers cheap, message me on WhatsApp for pricing. (#45)",Spam,true
+synthetic-mixed-0008,"Customer care was helpful, but it took forever to reach them.",Mixed,true
+synthetic-neutral-0079,Is there a limit on daily ATM withdrawals? (#79),Neutral,true
+synthetic-neutral-0075,What time does the Ikeja branch close today? (#75),Neutral,true
+synthetic-neutral-0014,What is the current exchange rate on this platform? (#14),Neutral,true
+synthetic-mixed-0072,"Nice app design, but I still experience random login issues. (#72)",Mixed,true
+synthetic-negative-0052,"I think this is fraud, someone accessed my account without my consent. (#52)",Negative,true
+synthetic-negative-0080,"I think this is fraud, someone accessed my account without my consent. (#80)",Negative,true
+synthetic-positive-0003,I love how easy it is to open an account with ALAT.,Positive,true
+synthetic-neutral-0044,Just checking if the new update is out yet. (#44),Neutral,true
+synthetic-negative-0094,"Worst banking app I have ever used, constant login issues. (#94)",Negative,true
+synthetic-spam-0063,"Make 500k weekly from home, DM me for details. (#63)",Spam,true
+synthetic-positive-0010,"Smooth and reliable app, best banking experience so far. (#10)",Positive,true
+synthetic-spam-0042,"Make 500k weekly from home, DM me for details. (#42)",Spam,true
+synthetic-neutral-0099,What is the current exchange rate on this platform? (#99),Neutral,true
+synthetic-negative-0099,My transfer failed three times today and no one from support responded. (#99),Negative,true
+synthetic-neutral-0015,What is the current exchange rate on this platform? (#15),Neutral,true
+synthetic-negative-0005,"Charges on this account are ridiculous, they take money for nothing.",Negative,true
+synthetic-positive-0031,"Great experience with the USSD code, worked first try. (#31)",Positive,true
+synthetic-mixed-0081,The app is fast but customer service is really slow to respond. (#81),Mixed,true
+synthetic-neutral-0038,How long does KYC verification usually take? (#38),Neutral,true
+synthetic-neutral-0077,Where can I find my account statement in the app? (#77),Neutral,true
+synthetic-negative-0069,"I think this is fraud, someone accessed my account without my consent. (#69)",Negative,true
+synthetic-neutral-0008,Just checking if the new update is out yet.,Neutral,true
+synthetic-spam-0066,"Buy followers cheap, message me on WhatsApp for pricing. (#66)",Spam,true
+synthetic-positive-0032,"Excellent customer service today, my issue was resolved in minutes. (#32)",Positive,true
+synthetic-negative-0009,The ATM swallowed my card and nobody at the branch could help.,Negative,true
+synthetic-mixed-0061,The USSD code works fine but the app itself keeps crashing. (#61),Mixed,true
+synthetic-positive-0078,"Smooth and reliable app, best banking experience so far. (#78)",Positive,true
+synthetic-mixed-0055,"Good rates on loans, though the approval process was frustrating. (#55)",Mixed,true
+synthetic-spam-0059,Random test comment asdkjhaskjdh 12345. (#59),Spam,true
+synthetic-negative-0018,"Charges on this account are ridiculous, they take money for nothing. (#18)",Negative,true
+synthetic-positive-0077,Thank you Wema for fixing the login issue so fast. (#77),Positive,true
+synthetic-positive-0070,"Great experience with the USSD code, worked first try. (#70)",Positive,true
+synthetic-positive-0041,Really happy with how quickly my loan was approved. (#41),Positive,true
+synthetic-neutral-0076,What is the current exchange rate on this platform? (#76),Neutral,true
+synthetic-negative-0063,The ATM swallowed my card and nobody at the branch could help. (#63),Negative,true
+synthetic-spam-0086,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#86),Spam,true
+synthetic-negative-0039,"Terrible customer service, I have been on hold for over an hour. (#39)",Negative,true
+synthetic-spam-0082,"Sharing my crypto giveaway link, first 100 people get free coins. (#82)",Spam,true
+synthetic-negative-0046,"Worst banking app I have ever used, constant login issues. (#46)",Negative,true
+synthetic-mixed-0065,The USSD code works fine but the app itself keeps crashing. (#65),Mixed,true
+synthetic-positive-0039,"Their support team resolved my card issue quickly, very impressed. (#39)",Positive,true
+synthetic-neutral-0025,Can I use ALAT outside Nigeria? (#25),Neutral,true
+synthetic-negative-0040,"I think this is fraud, someone accessed my account without my consent. (#40)",Negative,true
+synthetic-negative-0022,"Charges on this account are ridiculous, they take money for nothing. (#22)",Negative,true
+synthetic-mixed-0020,The app is fast but customer service is really slow to respond. (#20),Mixed,true
+synthetic-neutral-0048,How do I update my BVN details on the app? (#48),Neutral,true
+synthetic-neutral-0066,How long does KYC verification usually take? (#66),Neutral,true
+synthetic-spam-0047,"Investment opportunity, double your money in 7 days guaranteed. (#47)",Spam,true
+synthetic-mixed-0092,"Customer care was helpful, but it took forever to reach them. (#92)",Mixed,true
+synthetic-negative-0041,I was wrongly debited twice and still no refund after a week. (#41),Negative,true
+synthetic-mixed-0026,"Fast service at the branch, but ATM is often out of cash. (#26)",Mixed,true
+synthetic-negative-0026,"Terrible customer service, I have been on hold for over an hour. (#26)",Negative,true
+synthetic-spam-0051,"Investment opportunity, double your money in 7 days guaranteed. (#51)",Spam,true
+synthetic-negative-0032,App keeps crashing every time I try to check my balance. (#32),Negative,true
+synthetic-neutral-0030,What time does the Ikeja branch close today? (#30),Neutral,true
+synthetic-spam-0072,"Buy followers cheap, message me on WhatsApp for pricing. (#72)",Spam,true
+synthetic-mixed-0080,"Fast service at the branch, but ATM is often out of cash. (#80)",Mixed,true
+synthetic-positive-0081,I love how easy it is to open an account with ALAT. (#81),Positive,true
+synthetic-neutral-0028,What time does the Ikeja branch close today? (#28),Neutral,true
+synthetic-neutral-0080,What time does the Ikeja branch close today? (#80),Neutral,true
+synthetic-neutral-0018,How long does KYC verification usually take? (#18),Neutral,true
+synthetic-neutral-0058,Just checking if the new update is out yet. (#58),Neutral,true
+synthetic-mixed-0068,"Customer care was helpful, but it took forever to reach them. (#68)",Mixed,true
+synthetic-spam-0017,Follow my page for forex trading tips and guaranteed profit. (#17),Spam,true
+synthetic-mixed-0013,The USSD code works fine but the app itself keeps crashing. (#13),Mixed,true
+synthetic-neutral-0026,Can I use ALAT outside Nigeria? (#26),Neutral,true
+synthetic-mixed-0086,"Account opening was easy, but KYC verification dragged on for weeks. (#86)",Mixed,true
+synthetic-negative-0062,My transfer failed three times today and no one from support responded. (#62),Negative,true
+synthetic-mixed-0004,"Account opening was easy, but KYC verification dragged on for weeks.",Mixed,true
+synthetic-neutral-0086,Does this bank support USSD transfers to other banks? (#86),Neutral,true
+synthetic-neutral-0071,Does this bank support USSD transfers to other banks? (#71),Neutral,true
+synthetic-mixed-0041,"Fast service at the branch, but ATM is often out of cash. (#41)",Mixed,true
+synthetic-spam-0050,"Make 500k weekly from home, DM me for details. (#50)",Spam,true
+synthetic-spam-0010,"This is not about banking, check out my new music video. (#10)",Spam,true
+synthetic-positive-0068,"Their support team resolved my card issue quickly, very impressed. (#68)",Positive,true
+synthetic-spam-0067,"Make 500k weekly from home, DM me for details. (#67)",Spam,true
+synthetic-positive-0062,"Smooth and reliable app, best banking experience so far. (#62)",Positive,true
+synthetic-spam-0034,"Buy followers cheap, message me on WhatsApp for pricing. (#34)",Spam,true
+synthetic-negative-0027,"I think this is fraud, someone accessed my account without my consent. (#27)",Negative,true
+synthetic-neutral-0085,Where can I find my account statement in the app? (#85),Neutral,true
+synthetic-positive-0025,Really happy with how quickly my loan was approved. (#25),Positive,true
+synthetic-neutral-0037,Where can I find my account statement in the app? (#37),Neutral,true
+synthetic-neutral-0065,What documents are needed to open a savings account? (#65),Neutral,true
+synthetic-spam-0060,Follow my page for forex trading tips and guaranteed profit. (#60),Spam,true
+synthetic-spam-0011,"Congratulations, you have been selected for a cash reward, claim now. (#11)",Spam,true
+synthetic-positive-0090,I love how easy it is to open an account with ALAT. (#90),Positive,true
+synthetic-negative-0012,Still waiting for my credit to reflect since three days ago. (#12),Negative,true
+synthetic-neutral-0017,Just checking if the new update is out yet. (#17),Neutral,true
+synthetic-mixed-0098,"Account opening was easy, but KYC verification dragged on for weeks. (#98)",Mixed,true
+synthetic-positive-0054,I love how easy it is to open an account with ALAT. (#54),Positive,true
+synthetic-mixed-0094,"Good rates on loans, though the approval process was frustrating. (#94)",Mixed,true
+synthetic-spam-0040,"This is not about banking, check out my new music video. (#40)",Spam,true
+synthetic-spam-0083,"This is not about banking, check out my new music video. (#83)",Spam,true
+synthetic-positive-0002,"Great experience with the USSD code, worked first try.",Positive,true
+synthetic-mixed-0052,The USSD code works fine but the app itself keeps crashing. (#52),Mixed,true
+synthetic-mixed-0035,The USSD code works fine but the app itself keeps crashing. (#35),Mixed,true
+synthetic-spam-0076,"Congratulations, you have been selected for a cash reward, claim now. (#76)",Spam,true
+synthetic-negative-0024,Still waiting for my credit to reflect since three days ago. (#24),Negative,true
+synthetic-neutral-0004,What time does the Ikeja branch close today?,Neutral,true
+synthetic-neutral-0053,Just checking if the new update is out yet. (#53),Neutral,true
+synthetic-negative-0096,The ATM swallowed my card and nobody at the branch could help. (#96),Negative,true
+synthetic-mixed-0056,"Customer care was helpful, but it took forever to reach them. (#56)",Mixed,true
+synthetic-mixed-0067,The app is fast but customer service is really slow to respond. (#67),Mixed,true
+synthetic-positive-0099,"Excellent customer service today, my issue was resolved in minutes. (#99)",Positive,true
+synthetic-neutral-0094,Just checking if the new update is out yet. (#94),Neutral,true
+synthetic-mixed-0022,"Great support this time, though my last two complaints went unanswered. (#22)",Mixed,true
+synthetic-spam-0053,Follow my page for forex trading tips and guaranteed profit. (#53),Spam,true
+synthetic-neutral-0012,Where can I find my account statement in the app? (#12),Neutral,true
+synthetic-neutral-0033,How do I update my BVN details on the app? (#33),Neutral,true
+synthetic-positive-0037,"Smooth and reliable app, best banking experience so far. (#37)",Positive,true
+synthetic-mixed-0093,"Good rates on loans, though the approval process was frustrating. (#93)",Mixed,true
+synthetic-spam-0035,Click here to win a free iPhone now!!! www.totally-legit-prize.example (#35),Spam,true
+synthetic-mixed-0012,"Good rates on loans, though the approval process was frustrating. (#12)",Mixed,true
+synthetic-neutral-0043,How long does KYC verification usually take? (#43),Neutral,true
+synthetic-negative-0025,"I think this is fraud, someone accessed my account without my consent. (#25)",Negative,true
+synthetic-positive-0023,I love how easy it is to open an account with ALAT. (#23),Positive,true
+synthetic-positive-0012,"The new update made transfers so much faster, well done! (#12)",Positive,true
+synthetic-positive-0075,I love how easy it is to open an account with ALAT. (#75),Positive,true
+synthetic-negative-0001,"I think this is fraud, someone accessed my account without my consent.",Negative,true
+synthetic-spam-0012,"Make 500k weekly from home, DM me for details. (#12)",Spam,true
+synthetic-negative-0015,"This app dey stress me well well, e no dey work at all. (#15)",Negative,true
+synthetic-negative-0058,"This app dey stress me well well, e no dey work at all. (#58)",Negative,true
+synthetic-mixed-0044,The USSD code works fine but the app itself keeps crashing. (#44),Mixed,true
+synthetic-negative-0020,"This app dey stress me well well, e no dey work at all. (#20)",Negative,true
+synthetic-mixed-0084,"Fast service at the branch, but ATM is often out of cash. (#84)",Mixed,true
+synthetic-spam-0019,"Buy followers cheap, message me on WhatsApp for pricing. (#19)",Spam,true
+synthetic-positive-0047,"Smooth and reliable app, best banking experience so far. (#47)",Positive,true
+synthetic-negative-0071,I was wrongly debited twice and still no refund after a week. (#71),Negative,true
+synthetic-mixed-0017,"Nice app design, but I still experience random login issues. (#17)",Mixed,true
+synthetic-mixed-0024,"Transfers work great, but the charges are way too high. (#24)",Mixed,true
+synthetic-mixed-0039,The USSD code works fine but the app itself keeps crashing. (#39),Mixed,true
+synthetic-neutral-0063,What time does the Ikeja branch close today? (#63),Neutral,true
+synthetic-negative-0045,"I think this is fraud, someone accessed my account without my consent. (#45)",Negative,true
+synthetic-positive-0043,"The new update made transfers so much faster, well done! (#43)",Positive,true
+synthetic-mixed-0037,"Nice app design, but I still experience random login issues. (#37)",Mixed,true
+synthetic-positive-0086,"Their support team resolved my card issue quickly, very impressed. (#86)",Positive,true
+synthetic-mixed-0076,The app is fast but customer service is really slow to respond. (#76),Mixed,true
+synthetic-spam-0007,"Buy followers cheap, message me on WhatsApp for pricing.",Spam,true
+synthetic-spam-0091,"Sharing my crypto giveaway link, first 100 people get free coins. (#91)",Spam,true
+synthetic-spam-0061,"Buy followers cheap, message me on WhatsApp for pricing. (#61)",Spam,true
+synthetic-spam-0006,"Congratulations, you have been selected for a cash reward, claim now.",Spam,true

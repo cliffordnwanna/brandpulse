@@ -1,0 +1,143 @@
+{
+  "run_id": "snapshot-0e9f400d2af0439087e5e05a407d1cdb",
+  "started_at": "2026-07-26T10:11:51.413654Z",
+  "keywords": [
+    "Wema",
+    "Wema Bank",
+    "ALAT",
+    "ALAT by Wema",
+    "Wema fraud"
+  ],
+  "start": "2026-04-27T10:11:51.412823Z",
+  "end": "2026-07-26T10:11:51.412823Z",
+  "connector_states": {
+    "google_play": {
+      "connector_name": "google_play",
+      "checkpoints": {
+        "_all": {
+          "search_term": "_all",
+          "last_batch_index": 265,
+          "records_written": 479,
+          "last_successful_timestamp": "2026-07-26T10:18:23.792966Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        }
+      }
+    },
+    "app_store": {
+      "connector_name": "app_store",
+      "checkpoints": {
+        "_all": {
+          "search_term": "_all",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    },
+    "nairaland": {
+      "connector_name": "nairaland",
+      "checkpoints": {
+        "Wema": {
+          "search_term": "Wema",
+          "last_batch_index": 4,
+          "records_written": 130,
+          "last_successful_timestamp": "2026-07-26T10:12:02.515083Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "Wema Bank": {
+          "search_term": "Wema Bank",
+          "last_batch_index": 4,
+          "records_written": 135,
+          "last_successful_timestamp": "2026-07-26T10:12:01.693572Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "ALAT": {
+          "search_term": "ALAT",
+          "last_batch_index": 4,
+          "records_written": 80,
+          "last_successful_timestamp": "2026-07-26T10:12:11.716047Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "ALAT by Wema": {
+          "search_term": "ALAT by Wema",
+          "last_batch_index": 4,
+          "records_written": 65,
+          "last_successful_timestamp": "2026-07-26T10:12:12.703789Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "Wema fraud": {
+          "search_term": "Wema fraud",
+          "last_batch_index": 4,
+          "records_written": 10,
+          "last_successful_timestamp": "2026-07-26T10:12:21.118770Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        }
+      }
+    },
+    "youtube": {
+      "connector_name": "youtube",
+      "checkpoints": {
+        "Wema": {
+          "search_term": "Wema",
+          "last_batch_index": 8,
+          "records_written": 135,
+          "last_successful_timestamp": "2026-07-26T10:12:27.358727Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "Wema Bank": {
+          "search_term": "Wema Bank",
+          "last_batch_index": 9,
+          "records_written": 12,
+          "last_successful_timestamp": "2026-07-26T10:12:48.193758Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "ALAT": {
+          "search_term": "ALAT",
+          "last_batch_index": 7,
+          "records_written": 179,
+          "last_successful_timestamp": "2026-07-26T10:12:59.704823Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "ALAT by Wema": {
+          "search_term": "ALAT by Wema",
+          "last_batch_index": 9,
+          "records_written": 2,
+          "last_successful_timestamp": "2026-07-26T10:13:00.943433Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "Wema fraud": {
+          "search_term": "Wema fraud",
+          "last_batch_index": 9,
+          "records_written": 269,
+          "last_successful_timestamp": "2026-07-26T10:13:08.707724Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    }
+  }
+}

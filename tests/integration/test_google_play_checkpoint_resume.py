@@ -30,6 +30,7 @@ from brandpulse.orchestration.connector_health import JSONConnectorHealthStore
 from brandpulse.orchestration.orchestrator import Orchestrator
 from brandpulse.orchestration.state import NON_KEYWORD_JOB_KEY, RunStateStore
 from brandpulse.registry.source_registry import SourceRegistry
+from brandpulse.storage.local import LocalFileStorageBackend
 from tests.fixtures.google_play.sample_reviews import SAMPLE_REVIEW_NEGATIVE, SAMPLE_REVIEW_POSITIVE
 
 
@@ -86,6 +87,7 @@ def test_restart_mid_pagination_resumes_without_refetching_completed_pages(
     end = datetime(2100, 1, 1, tzinfo=UTC)
     state_store = RunStateStore(tmp_path / "state")
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
     registry = SourceRegistry(_config())
 
     pages = [[SAMPLE_REVIEW_POSITIVE], [SAMPLE_REVIEW_NEGATIVE], []]
@@ -102,7 +104,12 @@ def test_restart_mid_pagination_resumes_without_refetching_completed_pages(
     connector = _make_connector(tmp_path, health_store)
     run = state_store.load_or_create("run-1", ["Wema"], start, end)
     orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"google_play": connector}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"google_play": connector},
+        health_store,
+        storage_backend,
     )
     orchestrator.run(run)
 
@@ -116,7 +123,12 @@ def test_restart_mid_pagination_resumes_without_refetching_completed_pages(
     resumed_run = state_store.load_or_create("run-1", ["Wema"], start, end)
     fresh_connector = _make_connector(tmp_path, health_store)
     resumed_orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"google_play": fresh_connector}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"google_play": fresh_connector},
+        health_store,
+        storage_backend,
     )
     resumed_orchestrator.run(resumed_run)
 
@@ -136,6 +148,7 @@ def test_mid_pagination_crash_resumes_from_last_checkpointed_cursor(tmp_path: Pa
     end = datetime(2100, 1, 1, tzinfo=UTC)
     state_store = RunStateStore(tmp_path / "state")
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
     registry = SourceRegistry(_config())
 
     pages = [[SAMPLE_REVIEW_POSITIVE], [SAMPLE_REVIEW_NEGATIVE], []]
@@ -160,6 +173,7 @@ def test_mid_pagination_crash_resumes_from_last_checkpointed_cursor(tmp_path: Pa
         RetryConfig(max_attempts=1, backoff_seconds=[0]),
         {"google_play": connector},
         health_store,
+        storage_backend,
     )
     orchestrator.run(run)
 
@@ -180,7 +194,12 @@ def test_mid_pagination_crash_resumes_from_last_checkpointed_cursor(tmp_path: Pa
     resumed_run = state_store.load_or_create("run-2", ["Wema"], start, end)
     fresh_connector = _make_connector(tmp_path, health_store)
     resumed_orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"google_play": fresh_connector}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"google_play": fresh_connector},
+        health_store,
+        storage_backend,
     )
     resumed_orchestrator.run(resumed_run)
 
@@ -202,12 +221,18 @@ def test_only_one_job_is_created_for_a_non_keyword_scoped_connector(tmp_path: Pa
     end = datetime(2100, 1, 1, tzinfo=UTC)
     state_store = RunStateStore(tmp_path / "state")
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
     registry = SourceRegistry(_config())
 
     connector = _make_connector(tmp_path, health_store)
     run = state_store.load_or_create("run-3", ["Wema", "ALAT", "Wema Bank", "fraud"], start, end)
     orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"google_play": connector}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"google_play": connector},
+        health_store,
+        storage_backend,
     )
     orchestrator.run(run)
 

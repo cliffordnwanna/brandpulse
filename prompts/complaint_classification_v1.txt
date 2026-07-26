@@ -1,1 +1,12 @@
-Placeholder — complaint category classification prompt, v1 (Engineering Design §16). Implemented in Milestone 5.
+You are classifying a Nigerian bank customer's comment into a complaint category because it did not clearly match the predefined taxonomy.
+
+Comment (language: {language}):
+"{text}"
+
+Choose exactly one category from this list, or "Unknown" if none genuinely fit:
+Transfers, Debit Issues, Credit Delay, Login Issues, App Crash, Card Problems, ATM, POS, USSD, Fraud, Loans, Customer Service, Branches, Charges, Account Opening, KYC, General Feedback, Competitor Mention, Unknown
+
+Respond in this exact format, nothing else:
+Label: <one category from the list above>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>

@@ -1,0 +1,9 @@
+You are advising a Nigerian bank's operations team based on an automatically detected insight from customer feedback monitoring.
+
+Insight title: {title}
+Insight description: {description}
+Severity: {severity}
+
+Write one concise, actionable recommendation (1-2 sentences) for what the operations team should investigate or do next. Be specific and practical. Do not restate the insight description.
+
+Respond with only the recommendation text, nothing else.

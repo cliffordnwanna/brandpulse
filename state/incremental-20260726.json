@@ -1,0 +1,25 @@
+{
+  "run_id": "incremental-20260726",
+  "started_at": "2026-07-26T09:27:59.899870Z",
+  "keywords": [
+    "Wema"
+  ],
+  "start": "2026-06-26T09:27:59.899273Z",
+  "end": "2026-07-26T09:27:59.899273Z",
+  "connector_states": {
+    "google_play": {
+      "connector_name": "google_play",
+      "checkpoints": {
+        "_all": {
+          "search_term": "_all",
+          "last_batch_index": 0,
+          "records_written": 0,
+          "last_successful_timestamp": "2026-07-26T09:27:59.901998Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    }
+  }
+}

@@ -60,20 +60,35 @@ class BaseConnector(ABC):
     this ABC. The Source Registry auto-discovers connectors at startup
     (directory scan, no ``if platform == "reddit"`` branching anywhere).
 
-    ``collection_scope`` tells the orchestrator's job queue how to drive this
-    connector: ``"keyword"`` connectors get one job per configured keyword
-    (the classic case — Nairaland/forum search); connectors with any other
-    scope (``"app"``, ``"channel"``, ``"subreddit"``, ``"forum"``) collect
-    everything for a fixed target and get exactly one job total, since
-    calling them once per keyword would just re-walk identical data
-    redundantly (see Milestone 3's Google Play correction). Matches
-    ``Mention.collection_scope`` in the canonical schema (§2).
+    ``collection_scope`` describes *how a Mention was collected* — it matches
+    ``Mention.collection_scope`` in the canonical schema (§2) exactly, and
+    ranges over every value in that schema (``"keyword"``, ``"app"``,
+    ``"channel"``, ``"subreddit"``, ``"forum"``).
+
+    ``is_keyword_driven`` is a separate, orchestrator-facing signal: whether
+    this connector's ``search()`` genuinely needs one job per configured
+    keyword. Every concrete connector sets it explicitly (same discipline as
+    ``collection_scope`` — no implicit inheritance). Most of the time it
+    matches ``collection_scope == "keyword"`` — non-keyword scopes usually
+    mean "collect everything for a fixed target, one job total" (Google
+    Play's ``"app"``, a fixed YouTube ``"channel"``, etc., see Milestone 3's
+    Google Play correction). But a connector can be keyword-searched with a
+    *different* canonical ``collection_scope`` — Nairaland is
+    ``collection_scope="forum"`` (that's what its Mention records should
+    say they are) while still needing one job per keyword (that's how it's
+    actually searched); it sets ``is_keyword_driven=True`` explicitly rather
+    than being forced to lie about ``collection_scope`` just to get correct
+    job dispatch.
     """
 
     name: str
     version: str
     reliability: Literal["high", "medium", "low"]
     collection_scope: CollectionScope = "keyword"
+    is_keyword_driven: bool = True
+    """Default True to match the historical ``collection_scope=="keyword"``
+    default above — a connector with a non-"keyword" ``collection_scope``
+    must override this to ``False`` explicitly (Google Play/App Store do)."""
 
     @abstractmethod
     def search(

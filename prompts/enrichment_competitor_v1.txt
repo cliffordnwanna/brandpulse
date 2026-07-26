@@ -1,0 +1,11 @@
+You are identifying whether a Nigerian bank customer's comment mentions a competitor bank or fintech.
+
+Comment (language: {language}):
+"{text}"
+
+Classify the competitor mentioned as exactly one of: GTBank, Access, UBA, FirstBank, Opay, Moniepoint, None.
+
+Respond in this exact format, nothing else:
+Label: <one of GTBank, Access, UBA, FirstBank, Opay, Moniepoint, None>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>

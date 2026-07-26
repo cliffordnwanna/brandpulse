@@ -15,7 +15,11 @@ import urllib.robotparser
 from collections.abc import Callable
 from urllib.parse import urlparse
 
+import requests
+
 from brandpulse.config.models import RateLimitConfig
+
+ROBOTS_TXT_TIMEOUT_SECONDS = 15
 
 
 class RateLimiter:
@@ -53,15 +57,32 @@ def is_allowed_by_robots_txt(url: str, user_agent: str) -> bool:
     Fails open (returns True) if robots.txt can't be fetched/parsed — an
     unreachable robots.txt is not itself grounds to block a well-behaved
     scraper, but a robots.txt that explicitly disallows the path is respected.
+
+    Fetches ``robots.txt`` via ``requests`` with a real, identifying
+    User-Agent header, then hands the response body to
+    ``urllib.robotparser`` for parsing only — never lets ``robotparser``
+    perform its own internal fetch. ``RobotFileParser.read()`` uses bare
+    ``urllib.request`` with no custom headers, which some sites (confirmed
+    against Nairaland's Cloudflare-fronted robots.txt during Milestone 7)
+    403 purely on User-Agent grounds; ``robotparser`` then treats that 403
+    as "access denied by the site" and defaults to disallowing everything,
+    even when the actual robots.txt content (fetchable just fine with a
+    normal browser-like User-Agent) permits the path in question. That
+    false block, not the fail-open path above, was the actual bug — the
+    site's own rules were being misread, not correctly enforced.
     """
     parsed = urlparse(url)
     robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
 
     parser = urllib.robotparser.RobotFileParser()
-    parser.set_url(robots_url)
     try:
-        parser.read()
-    except OSError:
+        response = requests.get(
+            robots_url, headers={"User-Agent": user_agent}, timeout=ROBOTS_TXT_TIMEOUT_SECONDS
+        )
+        if response.status_code >= 400:
+            return True  # unreachable/absent robots.txt — fail open
+        parser.parse(response.text.splitlines())
+    except requests.RequestException:
         return True
 
     return parser.can_fetch(user_agent, url)

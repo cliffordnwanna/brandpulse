@@ -37,11 +37,39 @@ rate_limit:
 
 connectors:
   google_play:
-    # Intentionally empty — do NOT guess/hardcode package IDs here.
-    # Verify the real Wema Bank / ALAT Google Play package names before the
-    # first real run and populate this list then. An empty list makes the
-    # connector return NO_RESULTS/unhealthy rather than fail confusingly.
-    app_ids: []
+    # Verified Wema Bank / ALAT Google Play package names.
+    app_ids:
+      - "com.wemabank.alat.prod"
+      - "wemabank.com.afb.prod"
+      - "com.covr.wema"
     country: "ng"
     language: "en"
     max_reviews_per_run: 500
+
+  app_store:
+    # Verified against Apple's public iTunes Search API during Milestone 7
+    # (https://itunes.apple.com/search?term=ALAT+by+Wema&country=ng&entity=software):
+    #   1222853161 = ALAT (com.wemabank.alat.prod-ios) — main consumer app
+    #   1582348672 = WEMA Bank MobilePASS+ (com.wemabank.mobilepass)
+    app_ids: ["1222853161", "1582348672"]
+    country: "ng"
+    max_reviews_per_run: 500
+
+  nairaland:
+    max_pages: 5
+
+  youtube:
+    max_videos_per_keyword: 10
+    max_comments_per_video: 100
+
+storage:
+  backend: local          # future values: azure_blob, fabric_lakehouse, s3
+  root: ./storage
+
+classification:
+  enable_enrichment: false        # set true to enable 5b (LLM-backed enrichment)
+  enrichment_model: azure_openai  # or: groq
+  enrichment_trigger: low_confidence   # options: low_confidence | all | sampled
+  confidence_threshold: 0.75
+  sentiment_model: lexicon   # or: huggingface (see docs/models.md — large download, needs good bandwidth)
+  complaint_model: keyword   # or: huggingface (see docs/models.md — large download, needs good bandwidth)

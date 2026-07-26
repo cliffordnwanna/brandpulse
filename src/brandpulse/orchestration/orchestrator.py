@@ -1,11 +1,10 @@
 """Orchestrator (Engineering Design §1, §18).
 
 Ties together the job queue, run/connector state + checkpointing, the retry
-policy, and structured logging. Runs one job per (connector, keyword),
-looping over pagination: each ``connector.search()`` call is one page/batch,
-checkpointed (including the connector's opaque cursor) after every successful
-call, so a crash mid-pagination resumes from the last completed page rather
-than refetching from the start (Milestone 3 requirement).
+policy, structured logging, and (Milestone 4) storage: each successful page's
+raw records are normalized, validated, written to Bronze, then processed
+into Silver — incrementally, batch by batch, not a full rebuild (full
+rebuild is only ever triggered explicitly via the CLI).
 """
 
 from __future__ import annotations
@@ -13,6 +12,7 @@ from __future__ import annotations
 import time
 from collections.abc import Callable
 from datetime import datetime
+from typing import Any
 
 from brandpulse.config.models import RetryConfig
 from brandpulse.connectors.base import BaseConnector, RunResult, RunStatus
@@ -20,8 +20,11 @@ from brandpulse.orchestration.connector_health import ConnectorHealthStore
 from brandpulse.orchestration.job_queue import Job, JobQueue
 from brandpulse.orchestration.logging import get_logger, log_event
 from brandpulse.orchestration.retry import apply_auto_disable, run_with_retry
+from brandpulse.orchestration.run_report import ConnectorRunOutcome, RunReport
 from brandpulse.orchestration.state import NON_KEYWORD_JOB_KEY, Checkpoint, Run, RunStateStore
+from brandpulse.pipeline.silver import process_bronze_batch_to_silver
 from brandpulse.registry.source_registry import SourceRegistry
+from brandpulse.storage.base import StorageBackend
 
 
 class Orchestrator:
@@ -34,24 +37,34 @@ class Orchestrator:
         retry_config: RetryConfig,
         connectors: dict[str, BaseConnector],
         health_store: ConnectorHealthStore,
+        storage_backend: StorageBackend,
         sleep_fn: Callable[[float], None] = time.sleep,
+        run_report: RunReport | None = None,
     ) -> None:
         self._registry = registry
         self._state_store = state_store
         self._retry_config = retry_config
         self._connectors = connectors
         self._health_store = health_store
+        self._storage_backend = storage_backend
         self._sleep_fn = sleep_fn
         self._logger = get_logger()
+        self._run_report = run_report
 
     def run(self, run: Run) -> Run:
         """Execute every job for this run.
 
-        Connectors with ``collection_scope="keyword"`` get one job per
-        configured keyword (the classic case). Connectors with any other
-        scope (Google Play's ``"app"``, etc.) get exactly one job for the
-        whole run — keywords don't apply to how they collect, so spawning
-        one job per keyword would just re-walk identical data redundantly.
+        Connectors with ``is_keyword_driven=True`` get one job per
+        configured keyword (the classic case). Connectors with
+        ``is_keyword_driven=False`` get exactly one job for the whole run —
+        keywords don't apply to how they collect, so spawning one job per
+        keyword would just re-walk identical data redundantly. This is
+        deliberately a separate signal from ``collection_scope`` (which
+        describes how a Mention was collected, for the canonical schema) —
+        see ``BaseConnector.is_keyword_driven``'s docstring for why a
+        connector's job-dispatch behavior and its Mention-level
+        ``collection_scope`` don't always coincide (Nairaland: keyword-driven
+        dispatch, but ``collection_scope="forum"``).
 
         A job already checkpointed ``exhausted`` is skipped entirely, so
         calling ``run`` again with the same ``run.run_id`` resumes rather
@@ -60,7 +73,7 @@ class Orchestrator:
         jobs = []
         for source in self._registry.enabled_sources():
             connector = self._connectors.get(source.name)
-            if connector is not None and connector.collection_scope != "keyword":
+            if connector is not None and not connector.is_keyword_driven:
                 jobs.append(Job(source_name=source.name, search_term=NON_KEYWORD_JOB_KEY))
             else:
                 jobs.extend(Job(source_name=source.name, search_term=term) for term in run.keywords)
@@ -118,6 +131,7 @@ class Orchestrator:
             apply_auto_disable(
                 self._registry, self._health_store, job.source_name, run_failed=False
             )
+            self._write_batch_to_bronze_and_silver(connector, result.records)
             self._checkpoint_page(run, checkpoint, result)
             total_records += len(result.records)
 
@@ -129,6 +143,7 @@ class Orchestrator:
                 self._state_store.save(run)
                 break
 
+        duration_s = round(time.monotonic() - start_time, 3)
         log_event(
             self._logger,
             "connector_run_end",
@@ -136,11 +151,40 @@ class Orchestrator:
             search_term=job.search_term,
             run_id=run.run_id,
             status=final_status.value,
-            duration_s=round(time.monotonic() - start_time, 3),
+            duration_s=duration_s,
             result_count=total_records,
             reason=final_reason,
             auto_disabled=auto_disabled,
         )
+        if self._run_report is not None:
+            self._run_report.record(
+                ConnectorRunOutcome(
+                    connector_name=job.source_name,
+                    search_term=job.search_term,
+                    status=final_status.value,
+                    duration_s=duration_s,
+                    result_count=total_records,
+                    reason=final_reason,
+                    auto_disabled=auto_disabled,
+                )
+            )
+
+    def _write_batch_to_bronze_and_silver(
+        self, connector: BaseConnector, raw_records: list[Any]
+    ) -> None:
+        bronze_records: list[dict[str, Any]] = []
+        for raw_item in raw_records:
+            mention = connector.normalize(raw_item)
+            if not connector.validate(mention):
+                continue
+            record = mention.model_dump(mode="json")
+            self._storage_backend.write("bronze", mention.mention_id, record)
+            bronze_records.append(record)
+            if self._run_report is not None:
+                self._run_report.record_mention_id(mention.mention_id)
+
+        if bronze_records:
+            process_bronze_batch_to_silver(bronze_records, self._storage_backend)
 
     def _checkpoint_page(self, run: Run, checkpoint: Checkpoint, result: RunResult) -> None:
         checkpoint.last_batch_index += 1

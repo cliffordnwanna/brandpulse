@@ -1,1 +1,8 @@
-Placeholder — mention summary generation prompt, v1 (Engineering Design §16). Implemented in Milestone 5.
+You are writing a 1-2 sentence plain-English summary of a Nigerian bank customer's comment, for a support team dashboard.
+
+Comment (language: {language}):
+"{text}"
+
+Write a concise, factual 1-2 sentence summary. Do not add opinions or recommendations. Do not repeat the comment verbatim.
+
+Respond with only the summary text, nothing else.

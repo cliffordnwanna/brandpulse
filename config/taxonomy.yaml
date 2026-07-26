@@ -1,0 +1,35 @@
+# Complaint taxonomy and competitor list (Engineering Design §9.1, Milestone 6).
+# The classification pipeline and InsightEngine read this file — a different
+# organization can retarget BrandPulse at a different bank/competitor set by
+# editing this file alone, no code change (same principle as keywords.base_list
+# and connectors.google_play.app_ids in config.yaml).
+
+complaint_categories:
+  - Transfers
+  - Debit Issues
+  - Credit Delay
+  - Login Issues
+  - App Crash
+  - Card Problems
+  - ATM
+  - POS
+  - USSD
+  - Fraud
+  - Loans
+  - Customer Service
+  - Branches
+  - Charges
+  - Account Opening
+  - KYC
+  - General Feedback
+  - Competitor Mention
+
+competitors:
+  - GTBank
+  - Access Bank
+  - UBA
+  - FirstBank
+  - Opay
+  - Moniepoint
+  - Kuda
+  - Palmpay

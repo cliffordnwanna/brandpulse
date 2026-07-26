@@ -1,0 +1,11 @@
+You are identifying the intent behind a Nigerian bank customer's comment.
+
+Comment (language: {language}):
+"{text}"
+
+Classify the intent as exactly one of: Complaint, Praise, Query, Warning, Neutral.
+
+Respond in this exact format, nothing else:
+Label: <one of Complaint, Praise, Query, Warning, Neutral>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>

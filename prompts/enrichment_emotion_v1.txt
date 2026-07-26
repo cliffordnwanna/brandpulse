@@ -1,0 +1,11 @@
+You are identifying the primary emotion expressed in a Nigerian bank customer's comment.
+
+Comment (language: {language}):
+"{text}"
+
+Classify the primary emotion as exactly one of: Anger, Frustration, Appreciation, Confusion, Trust, Neutral.
+
+Respond in this exact format, nothing else:
+Label: <one of Anger, Frustration, Appreciation, Confusion, Trust, Neutral>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>

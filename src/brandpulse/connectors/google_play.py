@@ -101,6 +101,7 @@ class GooglePlayConnector(BaseConnector):
     version = "0.1.0"
     reliability = "high"
     collection_scope = "app"
+    is_keyword_driven = False
 
     def __init__(
         self,

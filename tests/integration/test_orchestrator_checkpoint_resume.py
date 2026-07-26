@@ -20,6 +20,7 @@ from brandpulse.orchestration.connector_health import JSONConnectorHealthStore
 from brandpulse.orchestration.orchestrator import Orchestrator
 from brandpulse.orchestration.state import RunStateStore
 from brandpulse.registry.source_registry import SourceRegistry
+from brandpulse.storage.local import LocalFileStorageBackend
 from tests.fixtures.stub_connectors.stub_connector import StubConnector
 
 
@@ -40,13 +41,19 @@ def test_restart_resumes_from_checkpoint_without_reprocessing(tmp_path: Path):
     end = datetime(2026, 1, 31, tzinfo=UTC)
     state_store = RunStateStore(tmp_path / "state")
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
 
     registry = SourceRegistry(_config())
     stub = StubConnector(batches=[[{"id": "1", "text": "great app"}]])
 
     run = state_store.load_or_create("run-1", ["Wema"], start, end)
     orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"stub_source": stub}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"stub_source": stub},
+        health_store,
+        storage_backend,
     )
     orchestrator.run(run)
 
@@ -59,7 +66,12 @@ def test_restart_resumes_from_checkpoint_without_reprocessing(tmp_path: Path):
     resumed_run = state_store.load_or_create("run-1", ["Wema"], start, end)
     fresh_stub = StubConnector(batches=[[{"id": "1", "text": "great app"}]])
     resumed_orchestrator = Orchestrator(
-        registry, state_store, _config().retry, {"stub_source": fresh_stub}, health_store
+        registry,
+        state_store,
+        _config().retry,
+        {"stub_source": fresh_stub},
+        health_store,
+        storage_backend,
     )
     resumed_orchestrator.run(resumed_run)
 
@@ -90,6 +102,7 @@ def test_three_consecutive_failed_runs_auto_disables_connector(tmp_path: Path):
     end = datetime(2026, 1, 31, tzinfo=UTC)
     registry = SourceRegistry(_config())
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
 
     # Fails every single retry attempt (3 max_attempts) across 3 separate runs
     # => 9 calls total, but only 3 "scheduled run" failures should count.
@@ -99,7 +112,12 @@ def test_three_consecutive_failed_runs_auto_disables_connector(tmp_path: Path):
         state_store = RunStateStore(tmp_path / f"state-{i}")
         run = state_store.load_or_create(f"run-{i}", ["Wema"], start, end)
         orchestrator = Orchestrator(
-            registry, state_store, _config().retry, {"stub_source": stub}, health_store
+            registry,
+            state_store,
+            _config().retry,
+            {"stub_source": stub},
+            health_store,
+            storage_backend,
         )
         orchestrator.run(run)
 
@@ -111,6 +129,7 @@ def test_success_between_failures_does_not_trigger_auto_disable(tmp_path: Path):
     end = datetime(2026, 1, 31, tzinfo=UTC)
     registry = SourceRegistry(_config())
     health_store = JSONConnectorHealthStore(tmp_path / "connector_health.json")
+    storage_backend = LocalFileStorageBackend(tmp_path / "storage")
 
     # Calls 1-3 fail (run 0's retries), call 4 succeeds (run 1), calls 5-7 fail (run 2's retries).
     stub = StubConnector(
@@ -122,7 +141,12 @@ def test_success_between_failures_does_not_trigger_auto_disable(tmp_path: Path):
         state_store = RunStateStore(tmp_path / f"state-{i}")
         run = state_store.load_or_create(f"run-{i}", ["Wema"], start, end)
         orchestrator = Orchestrator(
-            registry, state_store, _config().retry, {"stub_source": stub}, health_store
+            registry,
+            state_store,
+            _config().retry,
+            {"stub_source": stub},
+            health_store,
+            storage_backend,
         )
         orchestrator.run(run)
 

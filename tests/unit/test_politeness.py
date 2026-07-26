@@ -1,9 +1,9 @@
 """Unit tests for shared connector politeness controls (Engineering Design §17)."""
 
 import time
-import urllib.robotparser
 
 import pytest
+import requests
 
 from brandpulse.connectors.politeness import RateLimiter, is_allowed_by_robots_txt, random_delay
 
@@ -38,19 +38,58 @@ def test_rate_limiter_enforces_minimum_interval():
 
 
 def test_is_allowed_by_robots_txt_fails_open_on_unreachable_robots_txt(monkeypatch):
-    def _raise_read(self):
-        raise OSError("unreachable")
+    def _raise_get(*args, **kwargs):
+        raise requests.ConnectionError("unreachable")
 
-    monkeypatch.setattr(urllib.robotparser.RobotFileParser, "read", _raise_read)
+    monkeypatch.setattr("brandpulse.connectors.politeness.requests.get", _raise_get)
+
+    assert is_allowed_by_robots_txt("https://example.com/x", "TestBot") is True
+
+
+def test_is_allowed_by_robots_txt_fails_open_on_404(monkeypatch):
+    class _FakeResponse:
+        status_code = 404
+        text = ""
+
+    monkeypatch.setattr(
+        "brandpulse.connectors.politeness.requests.get", lambda *a, **k: _FakeResponse()
+    )
 
     assert is_allowed_by_robots_txt("https://example.com/x", "TestBot") is True
 
 
 def test_is_allowed_by_robots_txt_respects_disallow(monkeypatch):
-    def _fake_read(self):
-        self.parse(["User-agent: *", "Disallow: /blocked"])
+    class _FakeResponse:
+        status_code = 200
+        text = "User-agent: *\nDisallow: /blocked"
 
-    monkeypatch.setattr(urllib.robotparser.RobotFileParser, "read", _fake_read)
+    monkeypatch.setattr(
+        "brandpulse.connectors.politeness.requests.get", lambda *a, **k: _FakeResponse()
+    )
 
     assert is_allowed_by_robots_txt("https://example.com/blocked", "TestBot") is False
     assert is_allowed_by_robots_txt("https://example.com/allowed", "TestBot") is True
+
+
+def test_is_allowed_by_robots_txt_fetches_with_provided_user_agent(monkeypatch):
+    """The robots.txt fetch itself must use the connector's real User-Agent
+    header, not robotparser's default — this is the actual Milestone 7 fix:
+    some sites 403 the bare-urllib fetch robotparser performs internally,
+    which robotparser then misreads as "disallow everything" rather than
+    "couldn't reach it," incorrectly blocking paths the site's real
+    robots.txt permits."""
+    seen_headers = {}
+
+    class _FakeResponse:
+        status_code = 200
+        text = "User-agent: *\nAllow: /"
+
+    def _fake_get(url, headers=None, timeout=None):
+        seen_headers.update(headers or {})
+        return _FakeResponse()
+
+    monkeypatch.setattr("brandpulse.connectors.politeness.requests.get", _fake_get)
+
+    is_allowed_by_robots_txt("https://example.com/x", "BrandPulseBot/0.1")
+
+    assert seen_headers.get("User-Agent") == "BrandPulseBot/0.1"

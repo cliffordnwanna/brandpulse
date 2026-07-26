@@ -11,17 +11,16 @@ Full detail for each milestone lives in `claude/milestones/00X_*.md`. This file 
 - [x] **Milestone 3 — Google Play Connector** (`claude/milestones/003_google_play_connector.md`)
   First real connector, validated against the canonical schema and contract tests.
 
-- [ ] **Milestone 4 — Bronze + Silver Storage** (`claude/milestones/004_bronze_silver_storage.md`)
-  ⚠ `search_term` is now nullable (`collection_scope`/`collection_target` added in Milestone 3) — Silver-stage dedup/grouping must not assume `search_term` is always a string.
-  Storage layer, Silver-level near-duplicate detection, language detection.
+- [x] **Milestone 4 — Bronze + Silver Storage** (`claude/milestones/004_bronze_silver_storage.md`)
+  Storage backend abstraction (`StorageBackend` ABC + `LocalFileStorageBackend` + config-driven factory), Silver-level text-hash dedup, language detection (lingua-py + marker-word heuristics for Pidgin/Hausa/Igbo, which lingua doesn't support), `rebuild_silver_from_bronze` CLI command.
 
-- [ ] **Milestone 5 — Classification Pipeline + Evaluation** (`claude/milestones/005_classification_evaluation.md`)
-  Staged classification pipeline, classification queue, NaijaBERT-primary/LLM-conditional logic, 500-example labeled set, automatic accuracy/precision/recall/F1.
+- [x] **Milestone 5 — Classification Pipeline + Evaluation** (`claude/milestones/005_classification_evaluation.md`)
+  Tier 5a (sentiment + complaint category, always runs, no LLM) and Tier 5b (emotion/intent/urgency/competitor/summary + low-confidence sentiment re-check + Unknown-category overflow, LLM-conditional, off by default), Classification Queue, versioned Gold writes, `python -m brandpulse classify`/`evaluate` CLI commands, synthetic 500-example labeled set + accuracy/precision/recall/F1/confusion-matrix evaluation, session logging. Model adapters (sentiment/complaint) are pluggable — a lexicon/keyword default runs offline in this environment (no `transformers`/`torch` available here); a HuggingFace adapter is wired against the real spec'd model IDs, documented in `docs/models.md` for switching later.
 
-- [ ] **Milestone 6 — Reporting** (`claude/milestones/006_reporting.md`)
-  Full CSV output set + Gold tables.
+- [x] **Milestone 6 — Insight Engine + HTML Report** (`claude/milestones/006_reporting.md`)
+  `InsightEngine` (Gold -> structured `Insight` objects: emerging issues/anomaly detection, complaint velocity, platform heatmap, phrase mining, competitor mentions, emoji analysis, sentiment overview, drift) fully decoupled from the self-contained HTML renderer (inline CSS, base64 word cloud, no external requests) and from `{run_id}_insights.json` (the bridge file for future PDF/Slack/Power BI renderers). Emoji normalization in Silver (`emoji.demojize`, never stripped). Privacy: author-handle hashing + PII regex scan gate before every output write. `config/taxonomy.yaml` is now the sole source of the complaint taxonomy and competitor list. CLI: `snapshot --window` (default mode, fresh run_id + session-scoped report), `incremental` (checkpoint-based, cumulative archive), `report --run-id <id>|latest`, `compare --run-id <id>|latest`, `export --format csv|json`. `docs/platform-limitations.md` added, embedded in every report.
 
-- [ ] **Milestone 7 — Expand Connectors** (`claude/milestones/007_expand_connectors.md`)
+- [x] **Milestone 7 — Expand Connectors** (`claude/milestones/007_expand_connectors.md`)
   App Store, Nairaland, YouTube — one at a time, each re-validated against the schema and contract tests.
 
 **Rule:** don't start a milestone until the previous one is checked off *and reviewed* — not just checked off.

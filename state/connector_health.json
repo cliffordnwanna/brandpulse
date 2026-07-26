@@ -1,0 +1,18 @@
+{
+  "google_play": {
+    "connector_name": "google_play",
+    "consecutive_failures": 0
+  },
+  "nairaland": {
+    "connector_name": "nairaland",
+    "consecutive_failures": 0
+  },
+  "youtube": {
+    "connector_name": "youtube",
+    "consecutive_failures": 0
+  },
+  "app_store": {
+    "connector_name": "app_store",
+    "consecutive_failures": 5
+  }
+}

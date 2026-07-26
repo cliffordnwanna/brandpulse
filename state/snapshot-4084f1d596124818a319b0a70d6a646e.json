@@ -1,0 +1,143 @@
+{
+  "run_id": "snapshot-4084f1d596124818a319b0a70d6a646e",
+  "started_at": "2026-07-26T09:29:27.079899Z",
+  "keywords": [
+    "Wema",
+    "Wema Bank",
+    "ALAT",
+    "ALAT by Wema",
+    "Wema fraud"
+  ],
+  "start": "2026-06-26T09:29:27.079110Z",
+  "end": "2026-07-26T09:29:27.079110Z",
+  "connector_states": {
+    "google_play": {
+      "connector_name": "google_play",
+      "checkpoints": {
+        "_all": {
+          "search_term": "_all",
+          "last_batch_index": 178,
+          "records_written": 159,
+          "last_successful_timestamp": "2026-07-26T09:33:36.897482Z",
+          "cursor": "{\"app_index\": 0, \"token\": {\"token\": \"Cs0BIsQBAa2vNjElT-6D9y6bikm-2mo0grA_OnsYeNC4-WLDqfi3oc7TDnwN-O7vVMxX4cg6P31XqhXgXxkb3tLaHxssrCwp5ScOdzxKJkU2YeX54rQXKV5PHA2y-ShdjZfaBS9MI_beuMxG1LV5Nbgw4-SdvDC4nJbZwY3DGapfE-j5ilReRehkHAkzPkr9AjUdxUUbXhPtSJ71jFNlXFJsPwTAj-Th2thKllLCX_9GIPBWQPu3Mz5Ezt1zymB_0N-GdGUkLdYKBCiYqZfTBg\", \"lang\": \"en\", \"country\": \"ng\", \"sort\": 2, \"count\": 100, \"filter_score_with\": null, \"filter_device_with\": null}}",
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    },
+    "app_store": {
+      "connector_name": "app_store",
+      "checkpoints": {
+        "_all": {
+          "search_term": "_all",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    },
+    "nairaland": {
+      "connector_name": "nairaland",
+      "checkpoints": {
+        "Wema": {
+          "search_term": "Wema",
+          "last_batch_index": 4,
+          "records_written": 130,
+          "last_successful_timestamp": "2026-07-26T09:29:37.052743Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "Wema Bank": {
+          "search_term": "Wema Bank",
+          "last_batch_index": 4,
+          "records_written": 135,
+          "last_successful_timestamp": "2026-07-26T09:29:38.109246Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "ALAT": {
+          "search_term": "ALAT",
+          "last_batch_index": 4,
+          "records_written": 25,
+          "last_successful_timestamp": "2026-07-26T09:29:47.034937Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "ALAT by Wema": {
+          "search_term": "ALAT by Wema",
+          "last_batch_index": 4,
+          "records_written": 10,
+          "last_successful_timestamp": "2026-07-26T09:29:47.921210Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        },
+        "Wema fraud": {
+          "search_term": "Wema fraud",
+          "last_batch_index": 4,
+          "records_written": 10,
+          "last_successful_timestamp": "2026-07-26T09:29:55.398215Z",
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": true
+        }
+      }
+    },
+    "youtube": {
+      "connector_name": "youtube",
+      "checkpoints": {
+        "Wema": {
+          "search_term": "Wema",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "Wema Bank": {
+          "search_term": "Wema Bank",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "ALAT": {
+          "search_term": "ALAT",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "ALAT by Wema": {
+          "search_term": "ALAT by Wema",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        },
+        "Wema fraud": {
+          "search_term": "Wema fraud",
+          "last_batch_index": -1,
+          "records_written": 0,
+          "last_successful_timestamp": null,
+          "cursor": null,
+          "cursor_version": 1,
+          "exhausted": false
+        }
+      }
+    }
+  }
+}

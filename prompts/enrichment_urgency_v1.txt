@@ -1,0 +1,12 @@
+You are assessing how urgently a Nigerian bank's team should respond to this customer comment.
+
+Comment (language: {language}):
+"{text}"
+
+Classify urgency as exactly one of: Critical, High, Medium, Low.
+Critical means the comment suggests possible fraud, unauthorized access, or risk of the customer losing funds/access to their account.
+
+Respond in this exact format, nothing else:
+Label: <one of Critical, High, Medium, Low>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>

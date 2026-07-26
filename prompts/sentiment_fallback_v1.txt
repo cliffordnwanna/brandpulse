@@ -1,1 +1,13 @@
-Placeholder — low-confidence NaijaBERT sentiment fallback prompt (Engineering Design §16). Implemented in Milestone 5.
+You are re-checking a sentiment classification for a Nigerian bank customer's comment because the primary classifier's confidence was below the configured threshold.
+
+Comment (language: {language}):
+"{text}"
+
+Primary classifier's guess: {primary_label} (confidence: {primary_confidence})
+
+Classify the overall sentiment as exactly one of: Positive, Negative, Neutral, Mixed.
+
+Respond in this exact format, nothing else:
+Label: <one of Positive, Negative, Neutral, Mixed>
+Confidence: <a number between 0 and 1>
+Reason: <one short sentence>
