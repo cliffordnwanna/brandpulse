@@ -14,3 +14,7 @@ storage/gold/*
 !storage/gold/.gitkeep
 output/*
 !output/.gitkeep
+state/
+output/
+storage/
+.env
